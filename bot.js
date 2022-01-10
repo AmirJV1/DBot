@@ -35,8 +35,8 @@ client.on('messageCreate', (msg) => {
 	console.log(command.length);
 	if (command[0][0] !== '-') return;
 	switch (command[0]) {
-		case '-insulto':
-			if (command.length !== 1) {
+		case '-i':
+			if (command.length !== 2) {
 				msg.reply(`Error! aprende a escribir bien culero`);
 				return;
 			}
@@ -47,7 +47,7 @@ client.on('messageCreate', (msg) => {
 			msg.reply('Que te ayude tu madre imbecil');
 			return;
 		default:
-			msg.reply(`Error! aprende a escribir bien culero`);
+			msg.reply(`Error! como tu`);
 			return;
 	}
 });
