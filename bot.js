@@ -9,6 +9,7 @@ const insultos = [
 	'Pasan los dias y sigues siendo un fracasad@ Umi',
 	'Aveces cuando me siento mal recuerdo que no puedo ser una mierda mas grande y desastroza que Umi y se me pasa'
 ];
+const integrantes = ['Amir', 'Adrian', 'Jose Carlos', 'Jorge', 'Gerardo', 'Ramon'];
 
 const Discord = require('discord.js');
 const TOKEN = process.env.DISCORD_TOKEN;
@@ -45,6 +46,10 @@ client.on('messageCreate', (msg) => {
 			return;
 		case '-ayuda':
 			msg.reply('Que te ayude tu madre imbecil');
+			return;
+		case '-g':
+			const rnd = Math.floor(Math.random() * integrantes.length);
+			msg.reply(`${integrantes[rnd]} es gay!`);
 			return;
 		default:
 			msg.reply(`Error! como tu`);
