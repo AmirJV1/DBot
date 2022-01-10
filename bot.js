@@ -1,7 +1,5 @@
 require('dotenv').config();
-
-// add bot to server link:
-// https://discord.com/api/oauth2/authorize?client_id=929818334025900132&permissions=446677052480&scope=bot%20applications.commands
+import { insultos } from './data/insultList';
 
 const Discord = require('discord.js');
 const TOKEN = process.env.DISCORD_TOKEN;
@@ -28,20 +26,19 @@ client.on('messageCreate', (msg) => {
 	console.log(command.length);
 	if (command[0][0] !== '-') return;
 	switch (command[0]) {
-		case '-meeting':
-			if (command.length !== 4) {
-				msg.reply(`Error! Not a valid command, please type "-help" for more information`);
+		case '-insulto':
+			if (command.length !== 2) {
+				msg.reply(`Error! aprende a escribir bien culero`);
 				return;
 			}
-			msg.reply(`Meeting scheduled for ${command[1]} at ${command[2]} ${command[3]} `);
+			const rnd = Math.floor(Math.random() * insultos.length);
+			msg.reply(insultos[rnd].replace('Umi', command[1]));
 			return;
-		case '-help':
-			msg.reply(
-				'Type -meeting to schedule a zoom meeting example: -meeting MM/DD/YY HH:MM Timezone'
-			);
+		case '-ayuda':
+			msg.reply('Que te ayude tu madre imbecil');
 			return;
 		default:
-			msg.reply(`Error! Not a valid command, please type "-help" for more information`);
+			msg.reply(`Error! aprende a escribir bien culero`);
 			return;
 	}
 });
