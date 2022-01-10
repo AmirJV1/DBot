@@ -36,7 +36,7 @@ client.on('messageCreate', (msg) => {
 	if (command[0][0] !== '-') return;
 	switch (command[0]) {
 		case '-insulto':
-			if (command.length !== 2) {
+			if (command.length !== 1) {
 				msg.reply(`Error! aprende a escribir bien culero`);
 				return;
 			}
