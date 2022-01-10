@@ -1,5 +1,5 @@
 require('dotenv').config();
-import { insultos } from './data/insultList';
+import  insultos  from './data/insultList';
 
 const Discord = require('discord.js');
 const TOKEN = process.env.DISCORD_TOKEN;
