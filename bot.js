@@ -7,6 +7,8 @@ const insultos = [
 	'Umi para que eran las fotos de mis pies que me pediste?',
 	'Umi porque me miras asi y donde estan tus pantalones?',
 	'Pasan los dias y sigues siendo un fracasad@ Umi',
+	'Huele a culo, seguro es Umi',
+	'Umi que feo!',
 	'Aveces cuando me siento mal recuerdo que no puedo ser una mierda mas grande y desastroza que Umi y se me pasa'
 ];
 const integrantes = ['Amir', 'Adrian', 'Jose Carlos', 'Jorge', 'Gerardo', 'Ramon'];
@@ -48,8 +50,8 @@ client.on('messageCreate', (msg) => {
 			msg.reply('Que te ayude tu madre imbecil');
 			return;
 		case '-g':
-			const rnd = Math.floor(Math.random() * integrantes.length);
-			msg.reply(`${integrantes[rnd]} es gay!`);
+			const rnd2 = Math.floor(Math.random() * integrantes.length);
+			msg.reply(`${integrantes[rnd2]} es gay!`);
 			return;
 		default:
 			msg.reply(`Error! como tu`);
