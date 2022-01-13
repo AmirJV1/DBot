@@ -1,7 +1,5 @@
 require('dotenv').config();
-const { RandomPHUB } = require('discord-phub');
 
-const nsfw = new RandomPHUB((unique = true));
 const insultos = [
 	'Umi eres un aborto mal hecho',
 	'Cuando Umi nacio su mama no le dio el pecho pero la espalda',
@@ -12,6 +10,7 @@ const insultos = [
 	'Pasan los dias y sigues siendo un fracasad@ Umi',
 	'Huele a culo, seguro es Umi',
 	'Umi que feo!',
+	'Das pena aportas mas a la vida muriendo',
 	'Aveces cuando me siento mal recuerdo que no puedo ser una mierda mas grande y desastroza que Umi y se me pasa'
 ];
 const integrantes = ['Amir', 'Adrian', 'Jose Carlos', 'Jorge', 'Gerardo', 'Ramon'];
@@ -63,19 +62,6 @@ client.on('messageCreate', (msg) => {
 			https://nhentai.net/g/${hCode}/
 			`;
 			msg.reply(link);
-			return;
-		case '-r':
-			let category = 'hentai';
-			const getPo = async () => {
-				const poR = await nsfw.getRandomInCategory(category, 'gif');
-				return poR;
-			};
-			if (command[1] === undefined) {
-				msg.reply(getPo());
-			} else {
-				category = command[1];
-				msg.reply(getPo());
-			}
 			return;
 		case '-w':
 			const link2 = `
