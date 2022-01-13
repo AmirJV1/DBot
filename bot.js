@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { RandomPHUB } = require('discord-phub');
 
-const nsfw = new RandomPHUB(unique = true);
+const nsfw = new RandomPHUB((unique = true));
 const insultos = [
 	'Umi eres un aborto mal hecho',
 	'Cuando Umi nacio su mama no le dio el pecho pero la espalda',
@@ -65,9 +65,15 @@ client.on('messageCreate', (msg) => {
 			msg.reply(link);
 			return;
 		case '-r':
-			let category = "hentai"
+			let category = 'hentai';
+			const getPo = async () => {
+				return nsfw.getRandomInCategory(category, 'gif');
+			};
 			if (command[1] === undefined) {
-				msg.reply(nsfw.getRandomInCategory(category, "gif"));
+				msg.reply(getPo());
+			} else {
+				category = command[1];
+				msg.reply(getPo());
 			}
 			return;
 		case '-w':
