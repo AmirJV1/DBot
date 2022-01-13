@@ -61,6 +61,13 @@ client.on('messageCreate', (msg) => {
 			`;
 			msg.reply(link);
 			return;
+		case '-w':
+			const link = `
+			La waifu de ${command[1] === undefined ? 'tu papa' : command[1]} es:
+			https://mywaifulist.moe/random
+			`;
+			msg.reply(link);
+			return;
 		default:
 			msg.reply(`Error! como tu`);
 			return;
