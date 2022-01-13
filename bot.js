@@ -88,7 +88,7 @@ client.on('messageCreate', (msg) => {
 						});
 				} else {
 					axios
-						.get('http://api.nekos.fun:8080/api/pussy')
+						.get(`http://api.nekos.fun:8080/api/${categoria}`)
 						.then((res) => {
 							msg.reply(res.data.image);
 						})
