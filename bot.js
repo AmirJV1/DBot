@@ -54,8 +54,11 @@ client.on('messageCreate', (msg) => {
 			msg.reply(`${integrantes[rnd2]} es gay!`);
 			return;
 		case '-h':
-			let hCode = Math.floor(Math.random()*39998)
-			const link = `https://nhentai.net/g/${hCode}/`
+			let hCode = Math.floor(Math.random() * 39998);
+			const link = `
+			El hentai favorito de ${command[0]} es:
+			https://nhentai.net/g/${hCode}/
+			`;
 			msg.reply(link);
 			return;
 		default:
