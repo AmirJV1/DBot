@@ -18,7 +18,7 @@ const insultos = [
 ];
 const integrantes = ['Amir', 'Adrian', 'Jose Carlos', 'Jorge', 'Gerardo', 'Ramon'];
 
-const { Axios } = require('axios');
+
 const Discord = require('discord.js');
 const TOKEN = process.env.DISCORD_TOKEN;
 
