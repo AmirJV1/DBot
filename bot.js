@@ -95,16 +95,16 @@ client.on('messageCreate', (msg) => {
 						.catch((e) => {
 							msg.reply(`Esa categoria no existe!
 							Categorias disponibles:
-									4K	
-									Ass	
-									Boobs	
-									Cum	
-									Feet	
-									hentai	
-									spank	
-									gasm	
-									lesbian	
-									lewd	
+4K	
+Ass	
+Boobs	
+Cum	
+Feet	
+hentai	
+spank	
+gasm	
+lesbian	
+lewd	
 									`);
 						});
 				}
