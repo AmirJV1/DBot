@@ -67,7 +67,8 @@ client.on('messageCreate', (msg) => {
 		case '-r':
 			let category = 'hentai';
 			const getPo = async () => {
-				return nsfw.getRandomInCategory(category, 'gif');
+				const poR = await nsfw.getRandomInCategory(category, 'gif');
+				return poR;
 			};
 			if (command[1] === undefined) {
 				msg.reply(getPo());
