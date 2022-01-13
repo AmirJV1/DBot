@@ -1,5 +1,5 @@
 require('dotenv').config();
-const Axios = require('axios');
+const axios = require('axios').default;
 const insultos = [
 	'Umi eres un aborto mal hecho',
 	'Cuando Umi nacio su mama no le dio el pecho pero la espalda',
@@ -76,10 +76,12 @@ client.on('messageCreate', (msg) => {
 		case '-s':
 			//https://www.nekos.fun/apidoc.html
 			const getJuice = async () => {
-				const res = await Axios.get('http://api.nekos.fun:8080/api/pussy');
+				const res = await axios.get('http://api.nekos.fun:8080/api/pussy');
+				console.log(res.image);
 				return res.image;
 			};
 			const link3 = getJuice();
+			console.log(link3);
 			msg.reply(link3);
 			return;
 		default:
