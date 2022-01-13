@@ -10,9 +10,11 @@ const insultos = [
 	'Pasan los dias y sigues siendo un fracasad@ Umi',
 	'Huele a culo, seguro es Umi',
 	'Umi que feo!',
+	"No aportas nada a la sociedad",
+	"Tus primos",
 	'Tu cara ya es un insulto',
 	'Das pena aportas mas a la vida muriendo',
-	'Aveces cuando me siento mal recuerdo que no puedo ser una mierda mas grande y desastroza que Umi y se me pasa'
+	'Aveces cuando me siento mal recuerdo que no puedo ser una mierda mas grande y desastrozada que Umi y se me pasa'
 ];
 const integrantes = ['Amir', 'Adrian', 'Jose Carlos', 'Jorge', 'Gerardo', 'Ramon'];
 
@@ -70,6 +72,10 @@ client.on('messageCreate', (msg) => {
 			https://mywaifulist.moe/random
 			`;
 			msg.reply(link2);
+			return;
+		case '-s':
+			const link3 = `http://api.nekos.fun:8080/api/Blowjob/BJ`;
+			msg.reply(link3);
 			return;
 		default:
 			msg.reply(`Error! como tu`);
