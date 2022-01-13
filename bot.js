@@ -10,6 +10,7 @@ const insultos = [
 	'Pasan los dias y sigues siendo un fracasad@ Umi',
 	'Huele a culo, seguro es Umi',
 	'Umi que feo!',
+	'Tu cara ya es un insulto',
 	'Das pena aportas mas a la vida muriendo',
 	'Aveces cuando me siento mal recuerdo que no puedo ser una mierda mas grande y desastroza que Umi y se me pasa'
 ];
