@@ -18,7 +18,6 @@ const insultos = [
 ];
 const integrantes = ['Amir', 'Adrian', 'Jose Carlos', 'Jorge', 'Gerardo', 'Ramon'];
 
-
 const Discord = require('discord.js');
 const TOKEN = process.env.DISCORD_TOKEN;
 
@@ -80,8 +79,8 @@ client.on('messageCreate', (msg) => {
 				const res = await Axios.get('http://api.nekos.fun:8080/api/pussy');
 				return res.image;
 			};
-
-			msg.reply(getJuice());
+			const link3 = getJuice();
+			msg.reply(link3);
 			return;
 		default:
 			msg.reply(`Error! como tu`);
