@@ -75,18 +75,41 @@ client.on('messageCreate', (msg) => {
 			return;
 		case '-s':
 			//https://www.nekos.fun/apidoc.html
-			const getJuice = async () => {
-				axios
-					.get('http://api.nekos.fun:8080/api/pussy')
-					.then((res) => {
-						msg.reply(res.data.image);
-					})
-					.catch((e) => {
-						console.log(e);
-						msg.reply('La base de datos se fue alv no es culpa mia hdp');
-					});
+			const getJuice = async (categoria) => {
+				if (categoria === undefined) {
+					axios
+						.get('http://api.nekos.fun:8080/api/pussy')
+						.then((res) => {
+							msg.reply(res.data.image);
+						})
+						.catch((e) => {
+							console.log(e);
+							msg.reply('La base de datos se fue alv no es culpa mia hdp');
+						});
+				} else {
+					axios
+						.get('http://api.nekos.fun:8080/api/pussy')
+						.then((res) => {
+							msg.reply(res.data.image);
+						})
+						.catch((e) => {
+							msg.reply(`Esa categoria no existe!
+							Categorias disponibles:
+									4K	
+									Ass	
+									Boobs	
+									Cum	
+									Feet	
+									hentai	
+									spank	
+									gasm	
+									lesbian	
+									lewd	
+									`);
+						});
+				}
 			};
-			getJuice();
+			getJuice(command[1]);
 			return;
 		default:
 			msg.reply(`Error! como tu`);
