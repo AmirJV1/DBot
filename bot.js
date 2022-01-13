@@ -1,5 +1,5 @@
 require('dotenv').config();
-
+const Axios = require('axios');
 const insultos = [
 	'Umi eres un aborto mal hecho',
 	'Cuando Umi nacio su mama no le dio el pecho pero la espalda',
@@ -10,14 +10,15 @@ const insultos = [
 	'Pasan los dias y sigues siendo un fracasad@ Umi',
 	'Huele a culo, seguro es Umi',
 	'Umi que feo!',
-	"No aportas nada a la sociedad",
-	"Tus primos",
+	'No aportas nada a la sociedad',
+	'Tus primos',
 	'Tu cara ya es un insulto',
 	'Das pena aportas mas a la vida muriendo',
 	'Aveces cuando me siento mal recuerdo que no puedo ser una mierda mas grande y desastrozada que Umi y se me pasa'
 ];
 const integrantes = ['Amir', 'Adrian', 'Jose Carlos', 'Jorge', 'Gerardo', 'Ramon'];
 
+const { Axios } = require('axios');
 const Discord = require('discord.js');
 const TOKEN = process.env.DISCORD_TOKEN;
 
@@ -74,8 +75,13 @@ client.on('messageCreate', (msg) => {
 			msg.reply(link2);
 			return;
 		case '-s':
-			const link3 = `http://api.nekos.fun:8080/api/Blowjob/BJ`;
-			msg.reply(link3);
+			//https://www.nekos.fun/apidoc.html
+			const getJuice = async () => {
+				const res = await Axios.get('http://api.nekos.fun:8080/api/pussy');
+				return res.image;
+			};
+
+			msg.reply(getJuice());
 			return;
 		default:
 			msg.reply(`Error! como tu`);
