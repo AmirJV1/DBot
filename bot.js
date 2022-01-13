@@ -53,6 +53,11 @@ client.on('messageCreate', (msg) => {
 			const rnd2 = Math.floor(Math.random() * integrantes.length);
 			msg.reply(`${integrantes[rnd2]} es gay!`);
 			return;
+		case '-h':
+			let hCode = Math.floor(Math.random()*39998)
+			const link = `https://nhentai.net/g/${hCode}/`
+			msg.reply(link);
+			return;
 		default:
 			msg.reply(`Error! como tu`);
 			return;
