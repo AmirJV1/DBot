@@ -56,7 +56,7 @@ client.on('messageCreate', (msg) => {
 		case '-h':
 			let hCode = Math.floor(Math.random() * 39998);
 			const link = `
-			El hentai favorito de ${command[1]} es:
+			El hentai favorito de ${command[1] === undefined ? 'tu mama' : command[1]} es:
 			https://nhentai.net/g/${hCode}/
 			`;
 			msg.reply(link);
