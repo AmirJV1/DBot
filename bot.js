@@ -95,11 +95,10 @@ client.on('messageCreate', (msg) => {
 						.catch((e) => {
 							msg.reply(`Esa categoria no existe!
 							Categorias disponibles:
-4K	
-Ass	
-Boobs	
-Cum	
-Feet	
+4k	
+boobs	
+cum	
+feet	
 hentai	
 spank	
 gasm	
