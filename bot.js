@@ -76,9 +76,15 @@ client.on('messageCreate', (msg) => {
 		case '-s':
 			//https://www.nekos.fun/apidoc.html
 			const getJuice = async () => {
-				axios.get('http://api.nekos.fun:8080/api/pussy').then((res) => {
-					console.log(res.data)
-				});
+				axios
+					.get('http://api.nekos.fun:8080/api/pussy')
+					.then((res) => {
+						msg.reply(res.data.image);
+					})
+					.catch((e) => {
+						console.log(e);
+						msg.reply('La base de datos se fue alv no es culpa mia hdp');
+					});
 			};
 			getJuice();
 			return;
