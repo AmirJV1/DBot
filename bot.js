@@ -77,7 +77,8 @@ client.on('messageCreate', (msg) => {
 			//https://www.nekos.fun/apidoc.html
 			const getJuice = async () => {
 				axios.get('http://api.nekos.fun:8080/api/pussy').then((res) => {
-					console.log(res);
+					console.log(JSON.parse(res));
+					msg.reply(JSON.parse(res));
 				});
 			};
 			getJuice();
