@@ -52,7 +52,7 @@ client.on('messageCreate', (msg) => {
 			msg.reply(insultos[rnd].replace('Umi', command[1]));
 			return;
 		case '-ayuda':
-			msg.reply(`'''css
+			msg.reply(`
 			Los comandos son:
 			**-s** : consigue gifs e imagenes aleatorias [NSFW] .
 			**-s $categoria** : consigue gifs e imagenes de la categoria que buscaste [NSFW] .
@@ -62,7 +62,7 @@ client.on('messageCreate', (msg) => {
 			**-g** : quien es el gay del grupo?[NSFW]
 
 			<esos son todos los comandos>
-			'''`);
+			`);
 			return;
 		case '-g':
 			const rnd2 = Math.floor(Math.random() * integrantes.length);
