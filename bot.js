@@ -61,7 +61,7 @@ client.on('messageCreate', (msg) => {
 			**-h $nombre** : nos dice el doujin favorito de $nombre [NSFW]
 			**-g** : quien es el gay del grupo?[NSFW]
 
-			<esos son todos los comandos>
+			__*esos son todos los comandos*__
 			`);
 			return;
 		case '-g':
