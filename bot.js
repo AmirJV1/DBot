@@ -56,10 +56,10 @@ client.on('messageCreate', (msg) => {
 			Los comandos son:
 			**-s** : consigue gifs e imagenes aleatorias [NSFW] .
 			**-s $categoria** : consigue gifs e imagenes de la categoria que buscaste [NSFW] .
-			**-i $nombre** : insulta a $nombre [NSFW] .
+			**-i $nombre** : insulta a $nombre.
 			**-h** : nos dice el doujin favorito de tu mama [NSFW]
 			**-h $nombre** : nos dice el doujin favorito de $nombre [NSFW]
-			**-g** : quien es el gay del grupo?[NSFW]
+			**-g** : quien es el gay del grupo?.
 
 			__*esos son todos los comandos*__
 			`);
