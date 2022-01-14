@@ -98,15 +98,15 @@ client.on('messageCreate', (msg) => {
 						.catch((e) => {
 							msg.reply(`Esa categoria no existe!
 							Categorias disponibles:
->4k 	
->boobs	
->cum	
->feet	
->hentai	
->spank	
->gasm	
->lesbian	
->lewd	
+> **4k** 	
+> **boobs**	
+> **cum**	
+> **feet**	
+> **hentai**	
+> **spank**	
+> **gasm**	
+> **lesbian**	
+> **lewd**	
 									`);
 						});
 				}
@@ -114,7 +114,7 @@ client.on('messageCreate', (msg) => {
 			getJuice(command[1]);
 			return;
 		default:
-			msg.reply(`Error! como tu vida, escribe **-ayuda** para ver lso comandos`);
+			msg.reply(`Error! como tu vida, escribe **-ayuda** para ver los comandos`);
 			return;
 	}
 });
