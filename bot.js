@@ -52,7 +52,17 @@ client.on('messageCreate', (msg) => {
 			msg.reply(insultos[rnd].replace('Umi', command[1]));
 			return;
 		case '-ayuda':
-			msg.reply('Que te ayude tu madre imbecil');
+			msg.reply(`
+			Los comandos son:
+			-s : consigue gifs e imagenes aleatorias NSFW.
+			-s $categoria : consigue gifs e imagenes de la categoria que buscaste.
+			-i $nombre : insulta a $nombre
+			-h: nos dice el doujin favorito de tu mama
+			-h $nombre : nos dice el doujin favorito de $nombre
+			-g : quien es el gay del grupo?
+
+			<esos son todos los comandos>
+			`);
 			return;
 		case '-g':
 			const rnd2 = Math.floor(Math.random() * integrantes.length);
@@ -65,13 +75,6 @@ client.on('messageCreate', (msg) => {
 			https://nhentai.net/g/${hCode}/
 			`;
 			msg.reply(link);
-			return;
-		case '-w':
-			const link2 = `
-			La waifu de ${command[1] === undefined ? 'tu papa' : command[1]} es:
-			https://mywaifulist.moe/random
-			`;
-			msg.reply(link2);
 			return;
 		case '-s':
 			//https://www.nekos.fun/apidoc.html
