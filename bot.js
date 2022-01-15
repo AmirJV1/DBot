@@ -11,7 +11,7 @@ const insultos = [
 	'Huele a culo, seguro es Umi',
 	'Umi que feo!',
 	'No aportas nada a la sociedad',
-	"Seguro Umi es un gordo fetichista maricon que hace mods de discord",
+	'Seguro Umi es un gordo fetichista maricon que hace mods de discord',
 	'Tus padres son primos ',
 	'Tu cara ya es un insulto',
 	'Das pena aportas mas a la vida muriendo',
@@ -68,6 +68,14 @@ client.on('messageCreate', (msg) => {
 		case '-g':
 			const rnd2 = Math.floor(Math.random() * integrantes.length);
 			msg.reply(`${integrantes[rnd2]} es gay!`);
+			return;
+		case '-o':
+			const { voice } = msg.member;
+			if(!voice.channelId){
+				msg.reply("Debes unirte a un canal de voz!")
+				return
+			}
+			voice.channel.join()
 			return;
 		case '-h':
 			let hCode = Math.floor(Math.random() * 39998);
