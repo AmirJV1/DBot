@@ -1,6 +1,5 @@
 require('dotenv').config();
 const axios = require('axios');
-import { joinVoiceChannel } from '@discordjs/voice';
 const insultos = [
 	'Umi eres un aborto mal hecho',
 	'Cuando Umi nacio su mama no le dio el pecho pero la espalda',
@@ -69,15 +68,6 @@ client.on('messageCreate', (msg) => {
 		case '-g':
 			const rnd2 = Math.floor(Math.random() * integrantes.length);
 			msg.reply(`${integrantes[rnd2]} es gay!`);
-			return;
-		case '-o':
-			const channel = client.channels.cache.get(msg.channel.id);
-			if (!channel) return console.error('The channel does not exist!');
-			const connection = joinVoiceChannel({
-				channelId: msg.member.voice.channel,
-				guildId: msg.guild.id,
-				adapterCreator: msg.guild.voiceAdapterCreator
-			});
 			return;
 		case '-h':
 			let hCode = Math.floor(Math.random() * 39998);
