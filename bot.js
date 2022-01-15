@@ -70,7 +70,7 @@ client.on('messageCreate', (msg) => {
 			msg.reply(`${integrantes[rnd2]} es gay!`);
 			return;
 		case '-o':
-			const channel = client.channels.get('914687596557398067');
+			const channel = client.channels.cache.get('ChannelIDhere');
 			if (!channel) return console.error('The channel does not exist!');
 			channel
 				.join()
