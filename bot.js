@@ -11,7 +11,8 @@ const insultos = [
 	'Huele a culo, seguro es Umi',
 	'Umi que feo!',
 	'No aportas nada a la sociedad',
-	'Tus primos',
+	"Seguro Umi es un gordo fetichista maricon que hace mods de discord",
+	'Tus padres son primos ',
 	'Tu cara ya es un insulto',
 	'Das pena aportas mas a la vida muriendo',
 	'Aveces cuando me siento mal recuerdo que no puedo ser una mierda mas grande y desastrozada que Umi y se me pasa'
@@ -114,7 +115,7 @@ client.on('messageCreate', (msg) => {
 			getJuice(command[1]);
 			return;
 		default:
-			msg.reply(`Error! como tu vida, escribe **-ayuda** para ver los comandos`);
+			msg.reply(`Error!, como tu vida, escribe **-ayuda** para ver los comandos`);
 			return;
 	}
 });
